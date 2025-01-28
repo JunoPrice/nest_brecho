@@ -24,9 +24,9 @@ export class CategoriaService {
             where: {
                 id
             },
-           // relations: {
-            //    produto: true
-           // }
+            relations: {
+                produto: true
+            }
 
         });
     if (!categoria)
@@ -38,9 +38,9 @@ export class CategoriaService {
             where:{
                 nome: ILike(`%${nome}%`)
             },
-          //  relations: {
-          //      produto: true
-           // }
+            relations: {
+                produto: true
+            }
         })
     }
     async create(categoria: Categoria) : Promise<Categoria> {
